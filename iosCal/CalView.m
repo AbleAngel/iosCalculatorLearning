@@ -171,6 +171,8 @@
         [button setTitle:@"1" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton1:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonOne = button;
     }
@@ -204,6 +206,8 @@
         //[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton2:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonTwo = button;
     }
@@ -222,6 +226,8 @@
         [button setTitle:@"3" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton3:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonThree = button;
     }
@@ -241,6 +247,8 @@
         [button setTitle:@"+" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButtonAdd:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonAdd = button;
     }
@@ -260,6 +268,8 @@
         [button setTitle:@"4" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton4:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonFour = button;
     }
@@ -279,6 +289,8 @@
         [button setTitle:@"5" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton5:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonFive = button;
     }
@@ -298,6 +310,8 @@
         [button setTitle:@"6" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton6:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonSix = button;
     }
@@ -317,6 +331,8 @@
         [button setTitle:@"-" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButtonSub:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonSub = button;
     }
@@ -336,6 +352,8 @@
         [button setTitle:@"7" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton7:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonSeven = button;
     }
@@ -355,6 +373,8 @@
         [button setTitle:@"8" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton8:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonEight = button;
     }
@@ -374,6 +394,8 @@
         [button setTitle:@"9" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton9:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonNine = button;
     }
@@ -393,6 +415,8 @@
         [button setTitle:@"×" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButtonMul:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonMul = button;
     }
@@ -412,6 +436,8 @@
         [button setTitle:@"CLE" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButtonCle:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonCle = button;
     }
@@ -431,6 +457,8 @@
         [button setTitle:@"0" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButton0:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonZero = button;
     }
@@ -450,6 +478,8 @@
         [button setTitle:@"=" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButtonEqu:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonEqu = button;
     }
@@ -469,6 +499,8 @@
         [button setTitle:@"." forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
         [button addTarget:self action:@selector(actionButtonDot:) forControlEvents:UIControlEventTouchUpInside];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonDot = button;
     }
@@ -485,6 +517,8 @@
         button.alpha = 0.3;
         [button setTitle:@"/" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttondiv = button;
     }
@@ -497,6 +531,8 @@
         button.alpha = 0.3;
         [button setTitle:@"<-" forState:UIControlStateNormal];
         button.backgroundColor = [UIColor blueColor];
+        button.layer.cornerRadius = 10;
+        button.layer.masksToBounds = YES;
         [self addSubview:button];
         _buttonBack = button;
     }
