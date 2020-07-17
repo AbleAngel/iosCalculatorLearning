@@ -60,8 +60,10 @@
             a = numberOne + a;
         }else if([symbol isEqualToString:@"-"]){
             a = numberOne - a;
-        }else{
+        }else if([symbol isEqualToString:@"×"]){
             a = numberOne * a;
+        }else{
+            a = numberOne / a;
         }
         NSString *dStr      = [NSString stringWithFormat:@"%f", a];
         NSDecimalNumber *dn = [NSDecimalNumber decimalNumberWithString:dStr];
@@ -83,6 +85,15 @@
     numberOne = 0;
     state = 0;
     inputNumber = [NSMutableString stringWithCapacity:10];
+}
+
+- (void) getBackspace{
+    if(state == 0 || state == 2){
+        NSRange delete = {[inputNumber length]-1, 1};
+        [inputNumber deleteCharactersInRange:delete];
+    }else{
+        //symbol = @"";
+    }
 }
 
 @end

@@ -57,6 +57,8 @@
     [_calView.buttonSub addTarget:self action:@selector(buttonSubWasPressed) forControlEvents:UIControlEventTouchUpInside];
     [_calView.buttonMul addTarget:self action:@selector(buttonMulWasPressed) forControlEvents:UIControlEventTouchUpInside];
     [_calView.buttonCle addTarget:self action:@selector(buttonCLEWasPressed) forControlEvents:UIControlEventTouchUpInside];
+    [_calView.buttondiv addTarget:self action:@selector(buttondivWasPressed) forControlEvents:UIControlEventTouchUpInside];
+    [_calView.buttonBack addTarget:self action:@selector(buttonBackspaceWasPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.calView];
     
     
@@ -75,8 +77,8 @@
     [self.outField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view.mas_left).with.offset(20);
         make.right.mas_equalTo(self.view.mas_right).with.offset(-20);
-        make.height.mas_equalTo(self.outField.mas_width).multipliedBy(0.3);
-        make.centerY.mas_equalTo(self.view.mas_bottom).dividedBy(4);
+        make.height.mas_equalTo(self.view.mas_height).multipliedBy(0.25);
+        make.centerY.mas_equalTo(self.view.mas_bottom).dividedBy(6.2);
     }];
     
     [self.calView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -152,6 +154,14 @@
 }
 - (void)buttonCLEWasPressed {
     [self.number getCLE];
+    self.outField.text = [_number output];
+}
+- (void)buttondivWasPressed {
+    [self.number getSymbol:@"/"];
+    self.outField.text = [_number output];
+}
+- (void)buttonBackspaceWasPressed {
+    [self.number getBackspace];
     self.outField.text = [_number output];
 }
 

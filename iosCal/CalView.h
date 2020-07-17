@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIButton *buttonZero;
 @property (nonatomic, strong) UIButton *buttonEqu;
 @property (nonatomic, strong) UIButton *buttonDot;
+@property (nonatomic, strong) UIButton *buttonBack;
+@property (nonatomic, strong) UIButton *buttondiv;
 @property (nonatomic) UIImageView *image;
 
 @property (nonatomic, weak) ViewController *roorVC;

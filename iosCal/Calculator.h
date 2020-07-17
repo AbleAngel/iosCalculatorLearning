@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void) getSymbol:(NSString *) a;
 - (void) getEqu;
 - (void) getCLE;
+- (void) getBackspace;
 
 - (NSString *) output;
 

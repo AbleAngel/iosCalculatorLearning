@@ -26,6 +26,7 @@
         [self buttonFour];[self buttonFive];[self buttonSix];[self buttonSub];
         [self buttonSeven];[self buttonEight];[self buttonNine];[self buttonMul];
         [self buttonCle];[self buttonZero];[self buttonEqu];[self buttonDot];
+        [self buttonBack];[self buttondiv];
         [self image];
         
         [self autolayout];
@@ -114,26 +115,38 @@
     }];
     //这里还没改
     [self.buttonCle mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.buttonSeven.mas_bottom).with.offset(10);
+        make.top.mas_equalTo(self.buttonDot.mas_bottom).with.offset(10);
         make.left.mas_equalTo(self.mas_left).with.offset(0);
-        make.width.equalTo(self.buttonOne);
+        make.width.equalTo(self.buttonEqu);
+        make.height.equalTo(self.buttonOne);
+    }];
+    [self.buttonEqu mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.buttonDot.mas_bottom).with.offset(10);
+        make.right.mas_equalTo(self.mas_right).with.offset(0);
+        make.left.mas_equalTo(self.buttonCle.mas_right).with.offset(15);
         make.height.equalTo(self.buttonOne);
     }];
     [self.buttonZero mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.buttonSeven.mas_bottom).with.offset(10);
-        make.right.mas_equalTo(self.buttonDot.mas_left).with.offset(-15);
+        make.right.mas_equalTo(self.buttonBack.mas_left).with.offset(-15);
         make.width.equalTo(self.buttonOne);
         make.height.equalTo(self.buttonOne);
     }];
     [self.buttonDot mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.buttonSeven.mas_bottom).with.offset(10);
-        make.right.mas_equalTo(self.buttonEqu.mas_left).with.offset(-15);
+        make.left.mas_equalTo(self.mas_left).with.offset(0);
         make.width.equalTo(self.buttonOne);
         make.height.equalTo(self.buttonOne);
     }];
-    [self.buttonEqu mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.buttondiv mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.buttonSeven.mas_bottom).with.offset(10);
         make.right.mas_equalTo(self.mas_right).with.offset(0);
+        make.width.equalTo(self.buttonOne);
+        make.height.equalTo(self.buttonOne);
+    }];
+    [self.buttonBack mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.buttonSeven.mas_bottom).with.offset(10);
+        make.right.mas_equalTo(self.buttondiv.mas_left).with.offset(-15);
         make.width.equalTo(self.buttonOne);
         make.height.equalTo(self.buttonOne);
     }];
@@ -464,6 +477,30 @@
 
 - (void)actionButtonDot:(UIButton *) button{
     NSLog(@"按下.");
+}
+- (UIButton *)buttondiv{
+    if(_buttondiv == nil){
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.showsTouchWhenHighlighted=YES;
+        button.alpha = 0.3;
+        [button setTitle:@"/" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [self addSubview:button];
+        _buttondiv = button;
+    }
+    return _buttondiv;
+}
+- (UIButton *)buttonBack{
+    if(_buttonBack == nil){
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        button.showsTouchWhenHighlighted=YES;
+        button.alpha = 0.3;
+        [button setTitle:@"<-" forState:UIControlStateNormal];
+        button.backgroundColor = [UIColor blueColor];
+        [self addSubview:button];
+        _buttonBack = button;
+    }
+    return _buttonBack;
 }
 
 @end
